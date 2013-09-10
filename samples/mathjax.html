@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<title>Widgets: MathJax &mdash; CKEditor Sample</title>
+	<meta charset="utf-8">
+	<script src="../../../ckeditor.js"></script>
+	<link href="../../../samples/sample.css" rel="stylesheet">
+	<meta name="ckeditor-sample-name" content="Widgets: MathJax">
+	<meta name="ckeditor-sample-group" content="Plugins">
+	<meta name="ckeditor-sample-description" content="">
+	<meta name="ckeditor-sample-isnew" content="1">
+	<script>
+		CKEDITOR.disableAutoInline = true;
+	</script>
+	<style type="text/css">
+		p.math-example {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="samples">
+		<a href="../../../samples/index.html">CKEditor Samples</a> &raquo; Widgets: MathJax
+	</h1>
+
+	<textarea id="editor-framed" cols="10" rows="10">
+
+		<p>The following equations are represented in the HTML source code as LaTeX expressions.</p>
+
+		<h1>The Cauchy-Schwarz Inequality</h1>
+
+		<p><span class="math-tex">\( \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \)</span></p>
+
+		<h1>The probability of getting <span class="math-tex">\(k\)</span> heads when flipping <span class="math-tex">\(n\)</span> coins is</h1>
+
+		<p><span class="math-tex">\(P(E)   = {n \choose k} p^k (1-p)^{ n-k} \)</span></p>
+
+		<p>Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression <span class="math-tex">\(\sqrt{3x-1}+(1+x)^2\)</span> is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.</p>
+
+	</textarea>
+	<script>
+		CKEDITOR.replace( 'editor-framed', {
+			extraPlugins: 'mathjax',
+			height: 350
+		} );
+
+	</script>
+
+	<div id="footer">
+		<hr>
+		<p>
+			CKEditor - The text editor for the Internet - <a class="samples" href="http://ckeditor.com/">http://ckeditor.com</a>
+		</p>
+		<p id="copy">
+			Copyright &copy; 2003-2013, <a class="samples" href="http://cksource.com/">CKSource</a> - Frederico
+			Knabben. All rights reserved.
+		</p>
+	</div>
+</body>
+</html>
